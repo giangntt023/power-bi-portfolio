@@ -38,7 +38,7 @@ The data model follows a **Star Schema** architecture:
 
 ## 📊 Dashboard Key Features & Insights
 
-### 1. Amount & Transactions
+### 1. Overview
 
 ![1783094949403](image/README/1783094949403.png)
 
@@ -150,7 +150,6 @@ The data model follows a **Star Schema** architecture:
 * Name: Nguyễn Thị Thu Giang
 * Linkedin: [www.linkedin.com/in/giang-nguyen-368844241](https://www.linkedin.com/in/giang-nguyen-368844241/)
 * Github: [github.com/giangntt023](https://github.com/giangntt023)
-
 
 ---
 
