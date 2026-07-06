@@ -46,13 +46,13 @@ The data model follows a **Star Schema** architecture:
 
   * Key metrics: Total Amount, Total transactions, and % Transactions failed across different age groups.
   * Displays monthly historical trends, card type distributions, top spending categories, and regional merchant performance.
-  * Helps identify core revenue-driving age segments, top-performing spending categories, and monitor system transaction failure rates.
+  * Helps identify key revenue-driving age segments, top spending categories, and system transaction failure rates.
 * **Business Insight:**
 
-  * **Ages 31-55 (Main Revenue):** this group spends the most (~$4.33M) and shops regularly. Main categories:  **Supermarkets** ,  **Service Stations** , and  **Restaurants** .
-  * **Ages 22-30 (Low Activity):** this group spends very little (~$179K) and rarely uses their cards. They only spend big at **Auto Repair Shops** and  **Pharmacies** , and they have the highest transaction failure rate ( **2.14%** ).
-  * **Ages 65+ (High Frequency):** this group uses their cards the most, mostly at Supermarkets. Most of these users live in California and Texas.
-  * **Geography:** **California** has the highest spending (group age 65+), but **Texas** has the highest daily card swipes (group age 31-45).
+  * **Ages 31-55:** spends the most (~$4.33M) and shops regularly. Main categories:  **Supermarkets** ,  **Service Stations** , and  **Restaurants** .
+  * **Ages 22-30 :** minimal spend ($179K) and low usage, peaking only at **auto service shops/pharmacies**, and have the highest error rate (2.14%).
+  * **Ages 65+:** uses their cards the most, mostly at Supermarkets. Most of these users live in California and Texas.
+  * **Geography:** **California** has the highest spending (ages 65+), but **Texas** has the highest daily card swipes (ages 31-45).
 
 ### 2. Customer Demographics
 
@@ -61,8 +61,8 @@ The data model follows a **Star Schema** architecture:
 * **Features:** Demographic KPIs (Total Users, Average Age, Average Yearly Income, Average Credit Score), dynamic distributions by age, gender, income levels and a Top 10 Users treemap to monitor high-value accounts.
 * **Business Insight:**
 
-  * The primary customer base is the 31-45 age group, with credit scores ranging from 600 to 800 and incomes between $10K and $30K.
-  * The average credit score is relatively high at around 710 across over 1,000 users; customers with credit scores between 700 and 800 mostly have a per capital income of $10K–$40K, making them primary targets for credit card upsells and credit limit increases.
+  * The customer base is 31-45-year-olds with 600-800 credit scores and $10K–$30K incomes.
+  * Over 1,000 users have an average credit score of 710, and those with credit scores between 700 and 800 have per capita incomes of $10K–$40K, making them prime targets for credit card upsells and credit limit increases.
 
 ### 3. Finance Health
 
@@ -72,14 +72,14 @@ The data model follows a **Star Schema** architecture:
 
   * Focuses on credit risk and financial health assessment of bank users.
   * Tracks Financial KPIs: Total Debt, Debt-to-income, % High Risk users, High Credit Utilization Users > 30% and critical credit utilization alerts.
-  * Includes deep-dive breakdowns across age groups, income distributions, and risk levels to identify segments under financial difficulties.
+  * Includes deep-dive breakdowns by age groups, income distributions, and risk levels to identify segments under financial difficulties.
   * Helps detect high-risk default segments and check correlations between Credit Score and user spending behaviors.
 * **Business Insight:**
 
-  * **High Risk:** this group holds most of the debt ($124.50M) with a very high DTI of 170.1%. It includes all types of credit scores (even up to 850). Most people here spend under $2K a month, but there are a few high spenders who reach $2K to $4K.
-  * **Medium Risk:** this segment looks safe with a low debt of $1.77M and a reasonable 42.2% DTI. Users show good spending habits: those with higher credit scores actually spend less, and no one goes over their credit limit.
-  * **Low Risk:** this group is in perfect financial health, with only $1.15M in debt and a very low 8.2% DTI. Even though they have great credit scores (700 to 800+), they rarely use their cards, keeping their monthly spend under $1K.
-  * The 22-30 age group has a high financial risk with a DTI of approximately 158.6%, while the 65+ age group has a stable financial status with a significant DTI of 47.5%.
+  * **High Risk:** holds the most debt with a dangerously high DTI across all credit scores, though monthly spending below $2K.
+  * **Medium Risk:** users show good spending habits: those with higher credit scores actually spend less, and no one goes over their credit limit.
+  * **Low Risk:** displays perfect financial health and top-tier credit scores but they rarely use their cards, keeping their monthly spend under $1K.
+  * Young adults (22-30) face dangerous financial risk with high DTI, while the elderly (65+) remain highly stable and safe.
 
 ### 4. Error Analysis
 
@@ -91,9 +91,9 @@ The data model follows a **Star Schema** architecture:
   * Tracks the number of failed transactions and % Transactions Failed between Previous Year (PY) and Previous Month (PM), breakdowns across card types, transaction amount groups, and merchant categories to identify high-failure segments.
 * **Business Insight:**
 
-  * Debit cards and insufficient balance errors are consistently the core cause of system failures, accounting for over 55% of all errors over the past three years.
-  * Over 80% of errors are concentrated in low-value daily spending segments (under $100), while errors in large transactions are very rare.
-  * The high number of security errors (Bad Card, Bad CVV) at toll booths may be due to card verification fraud, drivers attempting to bypass barriers with expired cards, or employees entering incorrect card numbers in a rush.
+  * Debit card insufficient balance errors caused about 60% of system failures over the last three years.
+  * Over 80% of errors occur in low-value daily expenditure segments (under $100), while major transaction errors are rare.
+  * Security errors (Bad Card, Bad CVV, Expired Card) are mostly concentrated in toll payments, requiring a root cause investigation.
 
 ### 5. Fraud Analysis & Dormant cards
 
@@ -106,8 +106,8 @@ The data model follows a **Star Schema** architecture:
 * **Business Insight:**
 
   * Total dormant cards stay high at over 5,200 annually, mostly coming from Mastercard and Visa.
-  * Suspected fraudulent transactions showed a healthy downward trend by 2024, decreasing by 9.2% month-over-month to 2,279 cases.
-  * Fraud mostly happens in everyday shopping places like food stores and service stations, especially during the afternoon from 11:00 AM to 4:00 PM.
+  * Suspected fraudulent transactions showed a healthy reduction trend by 2024, falling 9.2% month on month to 2,279 cases.
+  * The risk of fraud is high in everyday retail (groceries/gas stations) between 11AM to 4PM.
 
 ### 6. CLV Analysis
 
@@ -137,19 +137,19 @@ The data model follows a **Star Schema** architecture:
 
 ## 💡 Recommendations
 
-1. Lower credit limits for high-risk young users (DTI >150%) and add low-balance alerts on Debit cards to reduce small-transaction failures.
-2. Implement contactless payments at toll booths and increase fraud-detection filters in the retail sector during peak afternoon hours (11 AM - 4 PM).
-3. Launch cashback and premium rewards to stimulate daily spending for the Low-Risk segment (credit scores 700-800+) who currently spend under $1K.
-4. Design exclusive loyalty programs tailored for Gen Y (highest CLV) and create seasonal spending prompts before peak months (May and July).
-5. Send automated deals to bring back "Hibernating" or "At Risk" users, and work with Visa/Mastercard to close down the 5,200 dead cards.
+1. Lower high-risk youth credit (DTI >150%) and enable Debit balance alerts to reduce small failures.
+2. Deploy contactless payments at toll booths and boost afternoon retail fraud filters during peak hours (11AM - 4PM).
+3. Launch cashback and premium rewards to boost daily spending for the low-risk and high-score segment.
+4. Design exclusive loyalty programs for Gen Y and launch seasonal spending promos before the May and July peaks.
+5. Send automated deals to reactivate Hibernating/At Risk users and work with card providers to close 5,200 dead cards.
 
 ---
 
 ## 👤Author
 
-* Name: Nguyễn Thị Thu Giang
-* Linkedin: [www.linkedin.com/in/giang-nguyen-368844241](https://www.linkedin.com/in/giang-nguyen-368844241/)
-* Github: [github.com/giangntt023](https://github.com/giangntt023)
+* **Name:** Nguyễn Thị Thu Giang
+* **Linkedin:** [www.linkedin.com/in/giang-nguyen-368844241](https://www.linkedin.com/in/giang-nguyen-368844241/)
+* **Github:** [github.com/giangntt023](https://github.com/giangntt023)
 
 ---
 
