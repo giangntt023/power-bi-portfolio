@@ -32,7 +32,7 @@ The data model follows a **Star Schema** architecture:
 * **Fact Tables:** `Fact_Transactions_data`, `Fact_error_data`
 * **Dimension Tables:** `Dim_Calendar`, `Dim_cards_data`, `Dim_users_data`, `Dim_mcc_codes, Dim_merchant, Dim_error`
 
-![1782124874391](image/README/1782124874391.png ")
+![1783351268412](image/README/1783351268412.png)
 
 ---
 
@@ -56,7 +56,7 @@ The data model follows a **Star Schema** architecture:
 
 ### 2. Customer Demographics
 
-![1783094980827](image/README/1783094980827.png)
+![1783351311210](image/README/1783351311210.png)
 
 * **Features:** Demographic KPIs (Total Users, Average Age, Average Yearly Income, Average Credit Score), dynamic distributions by age, gender, income levels and a Top 10 Users treemap to monitor high-value accounts.
 * **Business Insight:**
@@ -97,7 +97,7 @@ The data model follows a **Star Schema** architecture:
 
 ### 5. Fraud Analysis & Dormant cards
 
-![1783095089296](image/README/1783095089296.png)
+![1783351388567](image/README/1783351388567.png)
 
 * **Features:**
 
