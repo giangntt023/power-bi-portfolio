@@ -32,7 +32,7 @@ The data model follows a **Star Schema** architecture:
 * **Fact Tables:** `Fact_Transactions_data`, `Fact_error_data`
 * **Dimension Tables:** `Dim_Calendar`, `Dim_cards_data`, `Dim_users_data`, `Dim_mcc_codes, Dim_merchant, Dim_error`
 
-![1783351268412](image/README/1783351268412.png)
+![1783351666427](image/README/1783351666427.png)
 
 ---
 
