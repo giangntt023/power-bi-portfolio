@@ -1,4 +1,4 @@
-# 🏦 Aurora Bank - Customer Insights & Fraud Detection Dashboard
+# 🏦 Aurora Bank - Customer Insights & Risk Analysis Dashboard
 
 ## 📌 Project Overview
 
