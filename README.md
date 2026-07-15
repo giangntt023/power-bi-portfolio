@@ -12,7 +12,7 @@ Each folder in this repository is organized by primary tool, containing standalo
     
 *   **SQL Projects**: complex queries, data transformation, and query optimization.
       
-*   **Python Projects**: exploratory Data Analysis, automation and advanced analytics workflows.
+*   **Python Projects**: exploratory data analysis, automation and advanced analytics workflows.
     
 ---
 
